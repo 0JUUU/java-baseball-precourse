@@ -1,5 +1,7 @@
 package baseball;
 
+import nextstep.utils.Randoms;
+
 public class Application {
 
     public static void main(String[] args) {
@@ -9,8 +11,9 @@ public class Application {
         boolean isRunned = true;
 
         while (isRunned) {
+            // 1 이상 9 이하의 임의의 수 생성
+            int computerNumber = Randoms.pickNumberInRange(1,9);
 
-            // 임의의 수 생성
             // 게임 시
         }
 
