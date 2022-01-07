@@ -23,13 +23,14 @@ public class Application {
             int computerNumber = Randoms.pickNumberInRange(1, 9);
 
             // 사용자 수 입력
-            String userInput = "";
-            while (userInput != null) {
+            String userInput = "ERROR";
+
+            while (userInput.equals("ERROR")) {
                 System.out.printf("숫자를 입력해 주세요⚾️ : ");
                 userInput = inputUser();
             }
-
-            System.out.printf("--------------");
+            int input = Integer.parseInt(userInput);
+            System.out.println(computerNumber + " / " + input);
             // 비교
             // String info = checkNumber(computerNumber, userInput);
 
@@ -53,6 +54,6 @@ public class Application {
             return "ERROR";
         }
 
-        return null;
+        return input;
     }
 }
