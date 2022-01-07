@@ -20,7 +20,7 @@ public class Application {
             System.out.println();
 
             // 1 이상 9 이하의 임의의 수 생성
-            int computerNumber = Randoms.pickNumberInRange(1, 9);
+            int computerNumber = Randoms.pickNumberInRange(123, 987);
 
             // 사용자 수 입력
             String userInput = "ERROR";
