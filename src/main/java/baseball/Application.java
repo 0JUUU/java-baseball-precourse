@@ -12,20 +12,47 @@ public class Application {
         boolean isRunned = true;
 
         while (isRunned) {
+            // 게임 타이틀
             System.out.println("⚾⚾⚾⚾⚾⚾");
-            System.out.println("\uD83D\uDC9B\uD83D\uDC9B\uD83D\uDC9B\uD83D\uDC9B\uD83D\uDC9B\uD83D\uDC9B");
+            System.out.println(
+                "\uD83D\uDC9B\uD83D\uDC9B\uD83D\uDC9B\uD83D\uDC9B\uD83D\uDC9B\uD83D\uDC9B");
             System.out.println("⚾⚾⚾⚾⚾⚾");
             System.out.println();
 
             // 1 이상 9 이하의 임의의 수 생성
-            int computerNumber = Randoms.pickNumberInRange(1,9);
+            int computerNumber = Randoms.pickNumberInRange(1, 9);
 
             // 사용자 수 입력
-            System.out.printf("숫자를 입력해 주세요⚾️ : ");
-            String userInput = Console.readLine();
+            String userInput = "";
+            while (userInput != null) {
+                System.out.printf("숫자를 입력해 주세요⚾️ : ");
+                userInput = inputUser();
+            }
+
+            System.out.printf("--------------");
+            // 비교
+            // String info = checkNumber(computerNumber, userInput);
 
             // 게임 시
         }
 
+    }
+
+    // 사용자가 범위 내의 수를 입력했는지 확인
+    private static String inputUser() {
+        String input = Console.readLine();
+        try {
+            int inputNum = Integer.parseInt(input);
+
+            if (123 > inputNum || inputNum > 987) {
+                System.out.println("ERROR");
+                return "ERROR";
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("ERROR");
+            return "ERROR";
+        }
+
+        return null;
     }
 }
