@@ -13,10 +13,10 @@ public class Application {
 
         while (!isClosed) {
             // 게임 타이틀
-            System.out.println("⚾⚾⚾⚾⚾⚾");
+            System.out.println("⚾⚾⚾⚾⚾⚾⚾");
             System.out.println(
-                "\uD83D\uDC9B\uD83D\uDC9B\uD83D\uDC9B\uD83D\uDC9B\uD83D\uDC9B\uD83D\uDC9B");
-            System.out.println("⚾⚾⚾⚾⚾⚾");
+                "\uD83D\uDC9B\uD83D\uDC9B 숫자야구 \uD83D\uDC9B\uD83D\uDC9B");
+            System.out.println("⚾⚾⚾⚾⚾⚾⚾");
             System.out.println();
 
             // 1 이상 9 이하의 임의의 수 3번 생성
@@ -161,9 +161,6 @@ public class Application {
 
         return false;
     }
-
-    // 시작 범위 이상 끝 범위 이하 & 서로 다른 세 수인지 & 0 포함 여부 확인
-
 
     // 사용자가 범위 내의 수를 입력했는지 확인
     private static String inputUser() {
